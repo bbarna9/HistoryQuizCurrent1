@@ -8,15 +8,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
 import models.Question;
-import models.personalXmlReader;
+import models.PersonalXmlReader;
+import models.Result;
 
-import java.util.Random;
 import java.time.Instant;
 import javafx.util.Duration;
 import javafx.animation.KeyFrame;
@@ -27,7 +28,7 @@ import javafx.scene.control.Button;
 import static models.Question.loadNewQuestion;
 
 /**
- * The GameController is the code behind the {@link models/game.fxml}. This is where we define how we want
+ * The GameController is the code behind the game.fxml. This is where we define how we want
  * our application to run.
  */
 @Slf4j
@@ -39,11 +40,11 @@ public class GameController {
     public int score1;
     public int score2;
 
-    private final int maxQuestion = 5;
+    private final int maxQuestion = 3;
     private final int startingTime = 5;
     private int seconds = startingTime;
 
-    public personalXmlReader personalxmlreader = new personalXmlReader();
+    public PersonalXmlReader personalxmlreader = new PersonalXmlReader();
 
     @FXML
     public Label questionDisplay;
@@ -79,7 +80,7 @@ public class GameController {
     private Button getResultsButton;
 
     /**
-     * The first function is {@code newQuestion()}. Here we instantiate a {@link models/Question} object,
+     * The first function is {@code newQuestion()}. Here we instantiate a {@link models.Question} object,
      * and we pass it's content to our {@code questionDisplay} and {@code answerBlock} labels.
      */
     public void newQuestion(){
@@ -96,6 +97,9 @@ public class GameController {
      */
     public void update(){
         newQuestion();
+
+        useranswer1.setText("");
+        useranswer2.setText("");
 
         onlyDigits(useranswer1);
         onlyDigits(useranswer2);
@@ -132,8 +136,21 @@ public class GameController {
         int answer2 = 0;
 
         try {
-            answer1 = Integer.parseInt(useranswer1.getText());
-            answer2 = Integer.parseInt(useranswer2.getText());
+            if (useranswer1.getText() == ""){
+                answer1 = 0;
+            } else {
+                answer1 = Integer.parseInt(useranswer1.getText());
+            }
+        } catch (NumberFormatException e){
+            e.getMessage();
+        }
+
+        try {
+            if (useranswer2.getText() == ""){
+                answer2 = 0;
+            } else {
+                answer2 = Integer.parseInt(useranswer2.getText());
+            }
         } catch (NumberFormatException e){
             e.getMessage();
         }
@@ -141,25 +158,25 @@ public class GameController {
         int temp1 = answer-answer1;
         int temp2 = answer-answer2;
 
-        if(temp1 < 0){
+        if (temp1 < 0) {
             temp1 = temp1 * -1;
         }
 
-        if(temp2 < 0){
+        if (temp2 < 0) {
             temp2 = temp2 * -1;
         }
 
-        if(answer1 == answer2){
-
-        }
-        else if (answer2 == 0 | temp1 < temp2) {
+        if (answer2 == 0 || temp1 < temp2) {
             player1Score.setText(Integer.toString(Integer.parseInt(player1Score.getText()) + 1));
-        } else {
+        }
+        else if (answer1 == 0 || temp2 < temp1) {
             player2Score.setText(Integer.toString(Integer.parseInt(player2Score.getText()) + 1));
+        } else {
+            //Do nothing
         }
 
-        score1 = Integer.parseInt(player1Score.getText());
-        score2 = Integer.parseInt(player2Score.getText());
+        //score1 = Integer.parseInt(player1Score.getText());
+        //score2 = Integer.parseInt(player2Score.getText());
 
     }
 
@@ -220,8 +237,8 @@ public class GameController {
     }
 
     /**
-     * By pressing the {@code getResultsButton}, we call the {@showResults()} function. This simply loads up
-     * another FXML, the {@link fxml/results.fxml}, where we can check who won the game.
+     * By pressing the {@code getResultsButton}, we call the {@code showResults()} function. This simply loads up
+     * the results.fxml, where we can check who won the game.
      *
      * @param actionEvent since it requires a button being clicked
      * @throws IOException in case it can't load in the desired FXML file.
@@ -231,13 +248,13 @@ public class GameController {
         Parent root = fxmlLoader.load();
         fxmlLoader.<ResultController>getController().initdata(username1, username2, score1, score2);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        //stage.getIcons().add(icon);
+        stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
         stage.setScene(new Scene(root));
         stage.show();
     }
 
     /**
-     * This function simply sets in the username display with data it receive from the {@link fxml/lanch.fxml}
+     * This function simply sets in the username display with data it receive from the launch.fxml
      *
      * @param userName1
      * @param userName2

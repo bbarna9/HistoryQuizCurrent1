@@ -1,0 +1,284 @@
+<root>
+   <questions>
+      <element id="1">
+         <answer>1964</answer>
+         <text>Melyik évben robbantották fel az első kínai atombombát?</text>
+      </element>
+      <element id="2">
+         <answer>51</answer>
+         <text>Hány alapító tagja volt az ENSZ-nek?</text>
+      </element>
+      <element id="3">
+         <answer>64</answer>
+         <text>Hány évet élt IV. Béla?</text>
+      </element>
+      <element id="4">
+         <answer>70</answer>
+         <text>Hány év különbség van a nándorfehérvári diadal és a mohácsi vész időpontja között?</text>
+      </element>
+      <element id="5">
+         <answer>100</answer>
+         <text>Hány regényt írt Jókai Mór?</text>
+      </element>
+      <element id="6">
+         <answer>38</answer>
+         <text>Hány napig ostromolta a török Eger várát 1552-ben?</text>
+      </element>
+      <element id="7">
+         <answer>14</answer>
+         <text>Hány méter hosszú volt egy Tyrannosaurus rex?</text>
+      </element>
+      <element id="8">
+         <answer>176</answer>
+         <text>Hány napig tartott a leghosszabb olimpia? (1908, London)</text>
+      </element>
+      <element id="9">
+         <answer>8</answer>
+         <text>Hány napig tartott a legrövidebb olimpia? (1932, Los Angeles)</text>
+      </element>
+      <element id="10">
+         <answer>1918</answer>
+         <text>Melyik évben tértek át Oroszországban a Gergely-naptárra?</text>
+      </element>
+      <element id="11">
+         <answer>1582</answer>
+         <text>Melyik évben lépett életbe XIII. Gergely pápa naptárreformja?</text>
+      </element>
+      <element id="12">
+         <answer>1752</answer>
+         <text>Melyik évben vezették be Angliában a Gergely-naptárt?</text>
+      </element>
+      <element id="13">
+         <answer>1869</answer>
+         <text>Mikor nyitották meg a Szuezi-csatornát?</text>
+      </element>
+      <element id="14">
+         <answer>1415</answer>
+         <text>Melyik évben égették meg máglyán Husz Jánost a tanaiért?</text>
+      </element>
+      <element id="15">
+         <answer>1370</answer>
+         <text>Melyik évben koronázták lengyel királlyá I. (Nagy) Lajost?</text>
+      </element>
+      <element id="16">
+         <answer>1833</answer>
+         <text>Melyik évben született Johannes Brahms német zeneszerző?</text>
+      </element>
+      <element id="17">
+         <answer>1711</answer>
+         <text>Melyik évben kötötték meg a szatmári békét?</text>
+      </element>
+      <element id="18">
+         <answer>1735</answer>
+         <text>Melyik évben halt meg II. Rákóczi Ferenc Rodostóban?</text>
+      </element>
+      <element id="19">
+         <answer>1596</answer>
+         <text>Melyik évben foglalja el a török Eger várát?</text>
+      </element>
+      <element id="20">
+         <answer>997</answer>
+         <text>Melyik évben halt meg Géza fejedelem?</text>
+      </element>
+      <element id="21">
+         <answer>1055</answer>
+         <text>Melyik évben alapította I. András a tihanyi apátságot?</text>
+      </element>
+      <element id="22">
+         <answer>1092</answer>
+         <text>Melyik évben aratott győzelmet Szent László a betörő kunok felett?</text>
+      </element>
+      <element id="23">
+         <answer>1213</answer>
+         <text>Melyik évben ölték meg merániai Gertrúdot?</text>
+      </element>
+      <element id="24">
+         <answer>1239</answer>
+         <text>Melyik évben telepedtek meg Magyarországon a mongolok elől menekülő kunok?</text>
+      </element>
+      <element id="25">
+         <answer>1321</answer>
+         <text>Melyik évben halt meg Csák Máté?</text>
+      </element>
+      <element id="26">
+         <answer>1323</answer>
+         <text>Melyik évben rendelte el Károly Róbert új stabil pénz, a dénár verését?</text>
+      </element>
+      <element id="27">
+         <answer>1347</answer>
+         <text>Melyik évben érte el a nagy középkori pestisjárvány Európát?</text>
+      </element>
+      <element id="28">
+         <answer>1367</answer>
+         <text>Melyik évben alapította Nagy Lajos király Pécsett az első magyarországi egyetemet?</text>
+      </element>
+      <element id="29">
+         <answer>1458</answer>
+         <text>Melyik évben fejeződött be a rózsák háborúja Angliában?</text>
+      </element>
+      <element id="30">
+         <answer>1781</answer>
+         <text>Melyik évben költözött Wolfgang Amadeus Mozart Bécsbe?</text>
+      </element>
+      <element id="31">
+         <answer>1325</answer>
+         <text>A Titanic katasztrófájakor 1912-ben hány utas vesztette életét?</text>
+      </element>
+      <element id="32">
+         <answer>8</answer>
+         <text>Hány versszaka van a Himnusznak?</text>
+      </element>
+      <element id="33">
+         <answer>13</answer>
+         <text>Hány éves volt Nagy Sándor amikor Arisztotelész tanítani kezdte?</text>
+      </element>
+      <element id="34">
+         <answer>20</answer>
+         <text>Hány éves korában került trónra Nagy Sándor?</text>
+      </element>
+      <element id="35">
+         <answer>3</answer>
+         <text>Hány alkalommal koronázták meg Károly Róbertet?</text>
+      </element>
+      <element id="36">
+         <answer>4</answer>
+         <text>Hány elnökfejet faragtak a Rushmore-hegybe?</text>
+      </element>
+      <element id="37">
+         <answer>5</answer>
+         <text>Összesen hány alkalommal koronázták meg Luxemburgi Zsigmondot?</text>
+      </element>
+      <element id="38">
+         <answer>65</answer>
+         <text>Hány millió éve haltak ki a dinoszauruszok?</text>
+      </element>
+      <element id="39">
+         <answer>1205</answer>
+         <text>Melyik évben lépett először trónra II. András magyar király?</text>
+      </element>
+      <element id="40">
+         <answer>1487</answer>
+         <text>Melyik évben fedezte fel Bartolomeu Diaz a Jóreménység fokát?</text>
+      </element>
+      <element id="41">
+         <answer>1513</answer>
+         <text>Melyik évben fedezte fel Vasco Nunez de Balboa a Csendes-óceánt?</text>
+      </element>
+      <element id="42">
+         <answer>1520</answer>
+         <text>Melyik évben fedezte fel Fernando de Magellan a Magellán-szorost?</text>
+      </element>
+      <element id="43">
+         <answer>1777</answer>
+         <text>Melyik évben vezetik be Magyarországon az iskolakötelezettséget?</text>
+      </element>
+      <element id="44">
+         <answer>1616</answer>
+         <text>Melyik évben halt meg William Shkaespeare?</text>
+      </element>
+      <element id="45">
+         <answer>1718</answer>
+         <text>Melyik évben alkotta meg Fahrenheit az első higanyhőmérőt?</text>
+      </element>
+      <element id="46">
+         <answer>1945</answer>
+         <text>Melyik évben ért véget a második világháború? (világszinten)</text>
+      </element>
+      <element id="47">
+         <answer>1944</answer>
+         <text>Melyik évben ért véget a második világháború? (Európában)</text>
+      </element>
+      <element id="48">
+         <answer>1222</answer>
+         <text>Melyik évben adták ki az Aranybullát?</text>
+      </element>
+      <element id="49">
+         <answer>1800</answer>
+         <text>Mikor született Vörösmarty Mihály?</text>
+      </element>
+      <element id="50">
+         <answer>632</answer>
+         <text>Hány évig építették a kölni dómot?</text>
+      </element>
+      <element id="51">
+         <answer>7</answer>
+         <text>Hányszoros Forma1-es világbajnok Michael Schumacher?</text>
+      </element>
+      <element id="52">
+         <answer>1842</answer>
+         <text>Mikor volt a Lánchíd alapkő-letétele?</text>
+      </element>
+      <element id="53">
+         <answer>117</answer>
+         <text>Hány méter magas volt az alexandriai világítótorony?</text>
+      </element>
+      <element id="54">
+         <answer>1949</answer>
+         <text>Melyik évben vehették kézbe a gyerekek először a LEGO-t?</text>
+      </element>
+      <element id="55">
+         <answer>1873</answer>
+         <text>Melyik évben készítette el Levi Strauss az első farmernadrágját?</text>
+      </element>
+      <element id="56">
+         <answer>1902</answer>
+         <text>Melyik évben halt meg Levi Strauss, az első farmernadrág megalkotója?</text>
+      </element>
+      <element id="57">
+         <answer>1859</answer>
+         <text>Mikor adta közre Darwin A fajok eredete című művet?</text>
+      </element>
+      <element id="58">
+         <answer>1773</answer>
+         <text>Mikor született Csokonai Vitáz Mihály?</text>
+      </element>
+      <element id="59">
+         <answer>14</answer>
+         <text>Melyik évben halt meg Augustus római császár?</text>
+      </element>
+      <element id="60">
+         <answer>70</answer>
+         <text>Melyik évben foglaltra el és rombolta le Titus római császár Jeruzsálemet?</text>
+      </element>
+      <element id="61">
+         <answer>79</answer>
+         <text>Melyik évben pusztította el a Vezúv Pompei és Herculaneum városát?</text>
+      </element>
+      <element id="62">
+         <answer>284</answer>
+         <text>Melyik évben lett Diocletianus római császár?</text>
+      </element>
+      <element id="63">
+         <answer>476</answer>
+         <text>Mikor döntötték meg barbár törzsek az utolsó római császár hatalmát?</text>
+      </element>
+      <element id="64">
+         <answer>1918</answer>
+         <text>Melyik évben törölték el a Széchenyi lánchídon a hídvámot?</text>
+      </element>
+      <element id="65">
+         <answer>1506</answer>
+         <text>Melyik évben kezdték építeni a Szent Péter bazilikát?</text>
+      </element>
+      <element id="66">
+         <answer>1951</answer>
+         <text>Melyik évben vette fel Dunapentele a Sztálinváros nevet?</text>
+      </element>
+      <element id="67">
+         <answer>1951</answer>
+         <text>Melyik évtől őrzik a Szent Jobbot a Szent István Bazilikában?</text>
+      </element>
+      <element id="68">
+         <answer>1957</answer>
+         <text>Melyik évben halt meg Portugáliában Horthy Miklós?</text>
+      </element>
+      <element id="69">
+         <answer>1935</answer>
+         <text>Melyik évben indult a Szovjetunióban a sztahanovista mozgalom?</text>
+      </element>
+      <element id="70">
+         <answer>1886</answer>
+         <text>Mikor adományozták az USA-nak a szabadság szobrot?</text>
+      </element>
+   </questions>
+</root>

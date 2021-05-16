@@ -1,6 +1,9 @@
 models/Question.class
+models/PersonalXmlReader.class
 controllers/ResultController.class
 controllers/GameController$1.class
-models/personalXmlReader.class
 controllers/GameController.class
+models/Database.class
 controllers/LaunchController.class
+models/Result.class
+models/Result$ResultBuilder.class

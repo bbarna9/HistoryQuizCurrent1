@@ -116,6 +116,11 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -238,11 +243,10 @@
                 <configuration>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
                     <configLocation>
-                        Checkstyle.xml
+                        checkstyle.xml
                     </configLocation>
                 </configuration>
             </plugin>
-
         </plugins>
         <resources>
             <resource>
@@ -259,42 +263,51 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.2.0</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.1.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.2</version>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>${surefire.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
-            </plugin>
-            <plugin>
-                <groupId>org.openclover</groupId>
-                <artifactId>clover-maven-plugin</artifactId>
-                <version>4.4.1</version>
+                <version>${jacoco.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
         </plugins>
     </reporting>
     <distributionManagement>
         <site>
             <id>shrek</id>
-            <url>scp://@shrek.unideb.hu:2222/home/jeszy/public_html/${project.artifactId}</url>
+            <url>scp://barnab@shrek.unideb.hu:2222/home/barnab/public_html/${project.artifactId}</url>
         </site>
     </distributionManagement>
 </project>

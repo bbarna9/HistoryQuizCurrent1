@@ -35,7 +35,7 @@ public class LaunchController {
 
     /**
      * Once the {@code startGame} button is clicked, we do a verification wether both of the usernames were filled.
-     * If they were, the application loads up the {@link models/game.fxml}. If they weren't, we print an error message and the
+     * If they were, the application loads up the game.fxml. If they weren't, we print an error message and the
      * game won't start, until the the fields are filled appropriately.
      *
      * @param actionEvent
@@ -50,6 +50,7 @@ public class LaunchController {
             fxmlLoader.<GameController>getController().initdata(usernameTextfield1.getText(), usernameTextfield2.getText());
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
+            stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
             stage.show();
             log.info("Usernames are set to {} and {}, loading game scene.", usernameTextfield1.getText(), usernameTextfield2.getText());
         }
