@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LaunchController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="68.0" prefHeight="73.0" prefWidth="330.0" text="History Quiz" textAlignment="CENTER" textFill="#002366" wrapText="true">
+            <font>
+                <Font name="FreeSerif Bold" size="57.0" />
+            </font>
+        </Label>
+        <Label layoutX="104.0" layoutY="183.0" text="First Player:">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font></Label>
+        <TextField fx:id="usernameTextfield1" layoutX="223.0" layoutY="183.0" prefHeight="26.0" prefWidth="158.0" />
+        <Button fx:id="startButton" alignment="CENTER" layoutX="227.0" layoutY="300.0" mnemonicParsing="false" onAction="#startGame" prefHeight="51.0" prefWidth="151.0" text="Start game" textAlignment="CENTER">
+            <font>
+                <Font name="FreeSerif Bold" size="22.0" />
+            </font></Button>
+        <Label layoutX="78.0" layoutY="238.0" text="Second Player:">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameTextfield2" layoutX="223.0" layoutY="238.0" prefHeight="26.0" prefWidth="158.0" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="84.0" layoutY="269.0" prefHeight="26.0" prefWidth="438.0" textFill="#a12e2e">
+         <font>
+            <Font name="FreeSerif Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
