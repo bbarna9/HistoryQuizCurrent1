@@ -26,7 +26,7 @@
              <Font name="FreeSerif Bold" size="30.0" />
           </font>
        </Label>
-       <Button fx:id="dataButton" alignment="CENTER" layoutX="201.0" layoutY="317.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" text="See previous game result">
+       <Button fx:id="dataButton" alignment="CENTER" layoutX="201.0" layoutY="317.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" text="See previous game result" onAction="#prevDataRequested">
           <font>
              <Font name="FreeSerif Bold" size="20.0" />
           </font>

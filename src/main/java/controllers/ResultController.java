@@ -1,5 +1,11 @@
 package controllers;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 import models.Database;
 import models.Result;
 
@@ -7,7 +13,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import lombok.extern.slf4j.Slf4j;
 
+import javafx.event.ActionEvent;
+
 import javafx.scene.control.Button;
+
+import java.io.IOException;
 
 @Slf4j
 public class ResultController {
@@ -59,5 +69,15 @@ public class ResultController {
         int valami = 1;
         Result result = new Result(valami, username1, username2, score1, score2, winner);
         Database.addResults(result);
+    }
+
+    public void prevDataRequested(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/prevgames.fxml"));
+        Parent root = fxmlLoader.load();
+        //fxmlLoader.<PreviusGamesController>getController().initdata(username1, username2, score1, score2);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

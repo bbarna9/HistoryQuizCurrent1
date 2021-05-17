@@ -27,15 +27,15 @@ public class Database {
         }
     }
 
-    /*private static List<Result> getUsers() {
+    public static List<Result> getResults() {
         EntityManager em = emf.createEntityManager();
         try {
-            return em.createQuery("SELECT l FROM LegoSet l ORDER BY l.number", LegoSet.class).getResultList();
+            return em.createQuery("SELECT r FROM Result r ORDER BY r.id DESC", Result.class).getResultList();
         } finally {
             em.close();
         }
     }
-
+/*
     private static Long getTotalMatchesPlayed() {
         EntityManager em = emf.createEntityManager();
         try {
@@ -45,17 +45,6 @@ public class Database {
         }
     }
 
-    private static void deleteLegoSets() {
-        EntityManager em = emf.createEntityManager();
-        try {
-            em.getTransaction().begin();
-            long count = em.createQuery("DELETE FROM LegoSet").executeUpdate();
-            logger.info("Deleted {} LEGO set(s)", count);
-            em.getTransaction().commit();
-        } finally {
-            em.close();
-        }
-    }
 
     public static void main(String[] args) {
         createLegoSets();

@@ -9,17 +9,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Result{
 
-        /*public Result (int match, String player1, String player2, int score1, int score2, String winner, long version) {
-                this.match = match;
-                this.player1 = player1;
-                this.player2 = player2;
-                this.score1 = score1;
-                this.score2 = score2;
-                this.winner = winner;
-                this.version = version;
-        }*/
+/**
+ * In this class we are creating a {@code Result} entity, that declares the columns our {@link models.Database} is
+ * going to have. The ID is a Generated Value, which means we don't have to keep count of it, it will grow automatically.
+ */
+public class Result{
 
         @Id
         @GeneratedValue(strategy= GenerationType.AUTO)

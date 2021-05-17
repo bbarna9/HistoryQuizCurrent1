@@ -40,7 +40,7 @@ public class GameController {
     public int score1;
     public int score2;
 
-    private final int maxQuestion = 3;
+    private final int maxQuestion = 1;
     private final int startingTime = 5;
     private int seconds = startingTime;
 
@@ -136,8 +136,8 @@ public class GameController {
         int answer2 = 0;
 
         try {
-            if (useranswer1.getText() == ""){
-                answer1 = 0;
+            if (useranswer1.getText().equals("")){
+                answer1 = 1000000;
             } else {
                 answer1 = Integer.parseInt(useranswer1.getText());
             }
@@ -146,8 +146,8 @@ public class GameController {
         }
 
         try {
-            if (useranswer2.getText() == ""){
-                answer2 = 0;
+            if (useranswer2.getText().equals("")){
+                answer2 = 1000000;
             } else {
                 answer2 = Integer.parseInt(useranswer2.getText());
             }
@@ -165,19 +165,26 @@ public class GameController {
         if (temp2 < 0) {
             temp2 = temp2 * -1;
         }
+/*
+        if(answer1 == 0){
+            temp1 = 1000000;
+        }
 
-        if (answer2 == 0 || temp1 < temp2) {
+        if(answer2 == 0){
+            temp2 = 1000000;
+        }
+  */
+        if (temp1 < temp2) {
             player1Score.setText(Integer.toString(Integer.parseInt(player1Score.getText()) + 1));
         }
-        else if (answer1 == 0 || temp2 < temp1) {
+        else if (temp2 < temp1) {
             player2Score.setText(Integer.toString(Integer.parseInt(player2Score.getText()) + 1));
         } else {
             //Do nothing
         }
 
-        //score1 = Integer.parseInt(player1Score.getText());
-        //score2 = Integer.parseInt(player2Score.getText());
-
+        score1 = Integer.parseInt(player1Score.getText());
+        score2 = Integer.parseInt(player2Score.getText());
     }
 
     /**
