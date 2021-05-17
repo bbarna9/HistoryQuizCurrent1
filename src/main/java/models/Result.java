@@ -21,17 +21,17 @@ public class Result{
         private int id;
 
         @Column(nullable=false)
-        private String player1;
+        private String Player1;
 
         @Column(nullable=false)
-        private String player2;
+        private String Player2;
 
         @Column(nullable=false)
-        private int score1;
+        private int Score1;
 
         @Column(nullable=false)
-        private int score2;
+        private int Score2;
 
         @Column(nullable=false)
-        private String winner;
+        private String Winner;
 }

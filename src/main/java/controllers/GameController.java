@@ -1,5 +1,6 @@
 package controllers;
 
+import com.mysql.cj.log.Log;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +25,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import org.tinylog.Logger;
 
 import static models.Question.loadNewQuestion;
 
@@ -85,7 +87,7 @@ public class GameController {
      */
     public void newQuestion(){
         Question question = loadNewQuestion();
-
+        Logger.info("The question is set to: '{}.", question.getQuestion() + "'");
         questionDisplay.setText(question.getQuestion());
         answerBlock.setText(question.getAnswer());
     }
@@ -121,6 +123,7 @@ public class GameController {
         typed.textProperty().addListener((observable, oldValue, newValue) -> {
             if(!newValue.matches("\\d*")){
                 typed.setText(newValue.replaceAll("[^\\d]",""));
+                Logger.warn("The answer can only contain digits.");
             }
         });
     }
@@ -138,6 +141,7 @@ public class GameController {
         try {
             if (useranswer1.getText().equals("")){
                 answer1 = 1000000;
+                Logger.error("Player 1 didn't write an answer, therefore Player 2 won the round.");
             } else {
                 answer1 = Integer.parseInt(useranswer1.getText());
             }
@@ -148,6 +152,7 @@ public class GameController {
         try {
             if (useranswer2.getText().equals("")){
                 answer2 = 1000000;
+                Logger.error("Player 2 didn't write an answer, therefore Player 1 won the round.");
             } else {
                 answer2 = Integer.parseInt(useranswer2.getText());
             }
@@ -185,6 +190,7 @@ public class GameController {
 
         score1 = Integer.parseInt(player1Score.getText());
         score2 = Integer.parseInt(player2Score.getText());
+        Logger.info("The scores are set to {} and {}.", score1, score2);
     }
 
     /**
@@ -228,6 +234,7 @@ public class GameController {
                     useranswer1.setEditable(false);
                     useranswer2.setEditable(false);
                     nextQuestionButton.setVisible(true);
+                    Logger.info("Resetting timer.");
                     setScores();
                     if(Integer.parseInt(questionNumberDisplay.getText()) == maxQuestion){
                         nextQuestionButton.setVisible(false);
@@ -258,6 +265,7 @@ public class GameController {
         stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
         stage.setScene(new Scene(root));
         stage.show();
+        Logger.info("Loading results.");
     }
 
     /**
@@ -271,6 +279,7 @@ public class GameController {
         username2 = userName2;
         usernameLabel.setText("Current users: " + username1 + " and " + username2);
         getResultsButton.setVisible(false);
+        Logger.info("Initializing data.");
     }
 
     /**

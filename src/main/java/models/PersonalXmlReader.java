@@ -1,5 +1,6 @@
 package models;
 
+import org.tinylog.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -28,6 +29,7 @@ public class PersonalXmlReader {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(getClass().getResourceAsStream("/xml/questions.xml"));
+            Logger.info("Reading XML file.");
             doc.getDocumentElement().normalize();
             NodeList nList = doc.getElementsByTagName("element");
 
@@ -36,6 +38,7 @@ public class PersonalXmlReader {
                 Element eElement = (Element) nNode;
                 tempQ = eElement.getElementsByTagName("text").item(0).getTextContent();
                 tempA = eElement.getElementsByTagName("answer").item(0).getTextContent();
+                Logger.info("Selecting random question");
             }
 
         } catch (Exception e) {

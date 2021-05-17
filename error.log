@@ -1,0 +1,56 @@
+2021-05-17 16:11:48 [JavaFX Application Thread] controllers.LaunchController.startGame()
+INFO: Usernames are set to 2345 and 324, loading game scene.
+2021-05-17 16:50:15 [JavaFX Application Thread] main.MyApplication.start()
+INFO: Launching loading screen.
+2021-05-17 16:50:26 [JavaFX Application Thread] models.Question.loadNewQuestion()
+INFO: Passing randomly generated Integer to the XML reader.
+2021-05-17 16:50:26 [JavaFX Application Thread] models.PersonalXmlReader.XmlReader()
+INFO: Reading XML file.
+2021-05-17 16:50:26 [JavaFX Application Thread] models.PersonalXmlReader.XmlReader()
+INFO: Selecting random question
+2021-05-17 16:50:26 [JavaFX Application Thread] controllers.GameController.newQuestion()
+INFO: The question is set to Mikor adta közre Darwin A fajok eredete című művet?.
+2021-05-17 16:50:26 [JavaFX Application Thread] controllers.GameController.initdata()
+INFO: Initializing data.
+2021-05-17 16:50:26 [JavaFX Application Thread] controllers.LaunchController.startGame()
+INFO: Usernames are set to Barna and Benjámin, loading game scene.
+2021-05-17 16:50:32 [JavaFX Application Thread] controllers.GameController.handle()
+INFO: Resetting timer.
+2021-05-17 16:50:32 [JavaFX Application Thread] controllers.GameController.setScores()
+ERROR: Player 1 didn't write an answer, therefore Player 2 won the round.
+2021-05-17 16:50:32 [JavaFX Application Thread] controllers.GameController.setScores()
+ERROR: Player 2 didn't write an answer, therefore Player 1 won the round.
+2021-05-17 16:50:32 [JavaFX Application Thread] controllers.GameController.setScores()
+INFO: The scores are set to 0 and 0.
+2021-05-17 16:51:27 [JavaFX Application Thread] models.Database.addResults()
+INFO: Loading data to online database.
+2021-05-17 16:51:27 [JavaFX Application Thread] controllers.ResultController.initdata()
+INFO: Displaying results.
+2021-05-17 16:51:27 [JavaFX Application Thread] controllers.GameController.showResults()
+INFO: Loading results.
+2021-05-17 16:51:37 [JavaFX Application Thread] models.Database.getResults()
+INFO: Pulling data from online database
+2021-05-17 16:51:37 [JavaFX Application Thread] controllers.ResultController.prevDataRequested()
+INFO: Loading previous game results.
+2021-05-17 16:53:41 [JavaFX Application Thread] main.MyApplication.start()
+INFO: Launching loading screen.
+2021-05-17 16:53:48 [JavaFX Application Thread] models.Question.loadNewQuestion()
+INFO: Passing randomly generated Integer to the XML reader.
+2021-05-17 16:53:48 [JavaFX Application Thread] models.PersonalXmlReader.XmlReader()
+INFO: Reading XML file.
+2021-05-17 16:53:48 [JavaFX Application Thread] models.PersonalXmlReader.XmlReader()
+INFO: Selecting random question
+2021-05-17 16:53:48 [JavaFX Application Thread] controllers.GameController.newQuestion()
+INFO: The question is set to: 'Hány méter magas volt az alexandriai világítótorony?'.
+2021-05-17 16:53:49 [JavaFX Application Thread] controllers.GameController.initdata()
+INFO: Initializing data.
+2021-05-17 16:53:49 [JavaFX Application Thread] controllers.LaunchController.startGame()
+INFO: Usernames are set to Valaki and Valami, loading game scene.
+2021-05-17 16:53:55 [JavaFX Application Thread] controllers.GameController.handle()
+INFO: Resetting timer.
+2021-05-17 16:53:55 [JavaFX Application Thread] controllers.GameController.setScores()
+ERROR: Player 1 didn't write an answer, therefore Player 2 won the round.
+2021-05-17 16:53:55 [JavaFX Application Thread] controllers.GameController.setScores()
+ERROR: Player 2 didn't write an answer, therefore Player 1 won the round.
+2021-05-17 16:53:55 [JavaFX Application Thread] controllers.GameController.setScores()
+INFO: The scores are set to 0 and 0.

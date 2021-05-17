@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.tinylog.Logger;
 
 /**
  * This class loads up the launch screen.
@@ -20,6 +21,7 @@ public class MyApplication extends Application {
         primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        Logger.info("Launching loading screen.");
     }
 
 }

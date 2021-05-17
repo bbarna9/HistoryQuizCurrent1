@@ -1,6 +1,7 @@
 package models;
 
 import lombok.extern.slf4j.Slf4j;
+import org.tinylog.Logger;
 
 import java.util.Random;
 
@@ -37,6 +38,7 @@ public class Question {
         Question question = new Question();
         Random random = new Random();
         int rand = random.nextInt(70);
+        Logger.info("Passing randomly generated Integer to the XML reader.");
         PersonalXmlReader reader = new PersonalXmlReader();
         String[] data = reader.XmlReader(rand);
         question.setQuestion(data[0]);

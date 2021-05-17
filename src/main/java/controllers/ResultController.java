@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.Button;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 
@@ -69,6 +70,8 @@ public class ResultController {
         int valami = 1;
         Result result = new Result(valami, username1, username2, score1, score2, winner);
         Database.addResults(result);
+
+        Logger.info("Displaying results.");
     }
 
     public void prevDataRequested(ActionEvent actionEvent) throws IOException {
@@ -79,5 +82,6 @@ public class ResultController {
         stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
         stage.setScene(new Scene(root));
         stage.show();
+        Logger.info("Loading previous game results.");
     }
 }

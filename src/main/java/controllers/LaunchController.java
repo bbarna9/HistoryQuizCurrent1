@@ -17,6 +17,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import org.tinylog.Logger;
 
 /**
  * The LaunchController is the controller of the loading screen
@@ -44,6 +45,7 @@ public class LaunchController {
     public void startGame(ActionEvent actionEvent) throws IOException {
         if (usernameTextfield1.getText().isEmpty() || usernameTextfield2.getText().isEmpty()) {
             errorLabel.setText("Either one or both of the usernames are empty!");
+            Logger.error("Empty username fields.");
         } else {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/game.fxml"));
             Parent root = fxmlLoader.load();
@@ -52,7 +54,7 @@ public class LaunchController {
             stage.setScene(new Scene(root));
             stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/logo.png")));
             stage.show();
-            log.info("Usernames are set to {} and {}, loading game scene.", usernameTextfield1.getText(), usernameTextfield2.getText());
+            Logger.info("Usernames are set to {} and {}, loading game scene.", usernameTextfield1.getText(), usernameTextfield2.getText());
         }
 
     }
