@@ -1,8 +1,8 @@
 package models;
 
-import lombok.*;
-
 import javax.persistence.*;
+
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 
 /**
- * In this class we are creating a {@code Result} entity, that declares the columns our {@link models.Database} is
+ * In this class we are creating a {@code Result} entity, that declares the columns our Database model is
  * going to have. The ID is a Generated Value, which means we don't have to keep count of it, it will grow automatically.
  */
 public class Result{

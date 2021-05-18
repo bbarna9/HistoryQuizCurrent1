@@ -8,19 +8,19 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
-import java.io.FileReader;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URL;
 
 /**
- * The {@code personalXmlReader} class executes the question loading. This is achieved by loading in the entire
- * {@code questions.xml} file, and then selecting one specific question from the list, the one which's id equals
- * with the number passed to the function as a parameter. After the question was selected, the function returns with it.
+ * The {@code personalXmlReader} class contains the {@code XmlReader()} function, which we use to select a question from
+ * our XML containing all of the questions.
  */
 public class PersonalXmlReader {
 
+    /**
+     * The {@code XmlReader} function executes the question loading. This is achieved by loading in the entire
+     * {@code questions.xml} file, and then selecting one specific question from the list, the one which's index equals
+     * with the number passed to the function as a parameter. After the question was selected, the function returns with it
+     * as a two-item String array. The first is the question text itself, the second is the answer.
+     */
     public String[] XmlReader(int temp){
         String tempQ = "Error while loading question";
         String tempA = "Error while loading answer";

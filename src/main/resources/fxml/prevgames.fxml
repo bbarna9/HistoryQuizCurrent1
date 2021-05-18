@@ -21,7 +21,7 @@
             <Font name="FreeSerif Bold" size="30.0" />
          </font>
       </Label>
-      <Label fx:id="numberOfGamesPlayed" alignment="CENTER" layoutX="246.0" layoutY="354.0" prefHeight="45.0" prefWidth="309.0" text="Label" textFill="#002366">
+      <Label fx:id="numberOfGamesPlayed" alignment="CENTER" layoutX="131.0" layoutY="354.0" prefHeight="45.0" prefWidth="539.0" text="Label" textFill="#002366">
          <font>
             <Font name="FreeSerif Bold" size="24.0" />
          </font>

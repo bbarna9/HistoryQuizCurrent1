@@ -1,28 +1,23 @@
 package controllers;
 
+import org.tinylog.Logger;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
-import lombok.extern.slf4j.Slf4j;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import org.tinylog.Logger;
 
 /**
- * The LaunchController is the controller of the loading screen
+ * The LaunchController is the controller of the loading screen.
  */
-@Slf4j
 public class LaunchController {
 
     @FXML
